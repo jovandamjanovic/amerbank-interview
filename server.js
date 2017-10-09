@@ -14,7 +14,7 @@ var configDB = require('./config/database');
 
 mongoose.connect(configDB.url); //connect to db
 
-// require('./config/passport')(passport)
+require('./config/passport')(passport)
 
 app.use(morgan('dev')); // log requests to console
 app.use(cookieParser('thisisthesecretanditneedstobelong')); // read cookies
